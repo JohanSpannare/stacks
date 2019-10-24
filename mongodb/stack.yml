@@ -1,0 +1,24 @@
+version: '3'
+services:
+  mongo-n1:
+    image: mongo:3.2
+    restart: always
+    volumes:
+      - mongo-n1:/data/db
+  mongo-n2:
+    image: mongo:3.2
+    restart: always
+    volumes:
+      - mongo-n2:/data/db
+  mongo-n3:
+    image: mongo:3.2
+    restart: always
+    volumes:
+      - mongo-n3:/data/db      
+volumes:
+  mongo-n1:
+    external: false
+  mongo-n2:
+    external: false
+  mongo-n3:
+    external: false    
